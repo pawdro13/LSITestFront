@@ -1,0 +1,18 @@
+<label for="local">Lokalizacja: </label>
+<input id="local" type="text" [formControl]="local">
+<label for="dateFrom">Od: </label>
+<input id="dateFrom" type="date" [formControl]="dateFrom">
+<label for="dateTo">Do: </label>
+<input id="dateTo" type="date" [formControl]="dateTo">
+
+<button (click)="refreshReport()">Zatwierdz</button>
+<table>
+    <th *ngFor = "let column of headers">
+        {{column}}
+      </th>
+    <tr *ngFor = "let row of reports">
+        <td *ngFor = "let column of headersOrginal">
+            {{row[column]}}
+        </td>
+        </tr>
+</table>>
